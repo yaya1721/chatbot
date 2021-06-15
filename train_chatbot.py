@@ -1,13 +1,17 @@
+from __future__ import print_function
 import nltk
+
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import json
 import pickle
 
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
-from keras.optimizers import SGD
+
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.optimizers import SGD
+
 import random
 
 words=[]
@@ -95,3 +99,9 @@ hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5,
 model.save('chatbot_model.h5', hist)
 
 print("model created")
+
+
+
+
+
+
