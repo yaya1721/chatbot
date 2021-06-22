@@ -3,7 +3,7 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import pickle
 import numpy as np
-
+import tensorflow
 from tensorflow.keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
@@ -66,6 +66,7 @@ def chatbot_response(msg):
 
 #Creating GUI with tkinter
 import tkinter
+from tkinter import *
 
 def send():
     msg = EntryBox.get("1.0",'end-1c').strip()
